@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starset Services.</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content responsive-wrapper">
+            <div class="header-logo">
+                <a href="#">
+                    <div>
+                        <!-- <img src="https://assets.codepen.io/285131/untitled-ui-icon.svg" alt="Logo Icon" /> -->
+                        <img src="/logo.png" alt="Logo Icon" />
+                    </div>
+                    <!-- <h2>Starset Consultancy Services.</h2> -->
+                </a>
+            </div>
+            <div class="header-navigation">
+                <h2>Starset Consultancy Services</h2>
+            </div>
+            <a href="#" class="button">
+                <i class="ph-list-bold"></i>
+                <span>Menu</span>
+            </a>
+        </div>
+    </header>
+    <main class="main">
+        <div class="responsive-wrapper">
+            <div class="main-header">
+                <h1>Dashboard</h1>
+                <!-- <div class="search">
+                    <input type="text" placeholder="Search" />
+                    <button type="submit">
+                        <i class="ph-magnifying-glass-bold"></i>
+                    </button>
+                </div> -->
+            </div>
+            <div class="horizontal-tabs">
+                <a href="#" onclick="showContent('order-overview')">Today's Orders</a>
+                <a href="#" onclick="showContent('new-bill')">New Bill</a>
+                <a href="#" onclick="showContent('customer-info')">Customer's Information</a>
+                <a href="#" onclick="showContent('orders')">Orders</a>
+                <a href="#" onclick="showContent('workers')">Workers</a>
+            </div>
+            <div class="content">
+                <div id="new-bill" class="content-main hidden">
+                    <div class="bill-logo"><img src="/OIP.jpg" alt="log" ></div>
+                <form id="new-bill-form">
+                    <div class="form-section">
+                        <div class="form-column">
+                            <!-- <h2>Garment Details</h2> -->
+                             <fieldset>
+                                <legend>
+                                    <label for="measurements">Measurements:</label>
+                                </legend>
+                            
+                            <textarea id="measurements" name="measurements" rows="4" cols="150" required></textarea>
+                             </fieldset>
+
+                            <fieldset>
+                                <legend>Pant</legend>
+                                <label for="SideP/Cross"><input type="radio" name="SideP/Cross"  id="SideP/Cross" value="
+                                    SideP/Cross" >SideP/Cross</label>
+                                    <label for="Plates"><input type="radio" name="Plates"  id="Plates" value="
+                                        Plates" >Plates</label>
+                                        <label for="Belt"><input type="radio" name="Belt"  id="Belt" value="
+                                            Belt" >Belt</label>
+                            <label for="Back P."><input type="radio" name="Back P."  id="Back P." value="
+                            Back P." >Back P.</label>
+                            <label for="WP."><input type="radio" name="WP."  id="WP." value="
+                                WP." >WP.</label>
+
+
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>Shirt</legend>
+                                <label for="Collar"><input type="radio" name="Collar"  id="Collar" value="
+                                    Collar" >Collar</label>
+                                    <label for="Cuff"><input type="radio" name="Cuff"  id="Cuff" value="
+                                        Cuff" >Cuff</label>
+                                        <label for="Pkt."><input type="radio" name="Pkt."  id="Pkt." value="
+                                            Pkt." >Pkt.</label>
+                            <label for="Loose"><input type="radio" name="Loose"  id="Loose" value="
+                            Loose" >Loose</label>
+                            <label for="DT/TT"><input type="radio" name="DT/TT"  id="DT/TT" value="
+                                DT/TT" >DT/TT</label>
+
+
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>Garment Type:</legend>
+                                <label for="shirt">
+                                    <input type="radio" id="Suit" name="garment_type" value="Suit"  required>
+                                    Suit.
+                                </label>
+                                <label for="pants">
+                                    <input type="radio" id="Safari/Jacket" name="garment_type" value="Safari/Jacket" required >
+                                    Safari/Jacket.
+                                </label>
+                                <label for="jacket">
+                                    <input type="radio" id="Pant" name="garment_type" value="Pant" required >
+                                    Pant.
+                                </label>
+                                <label for="other">
+                                    <input type="radio" id="Shirt" name="garment_type" value="Shirt"  required>
+                                    Shirt.
+                                </label>
+                            </fieldset>
+
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" id="quantity" name="quantity" min="1" required>
+
+                            <label for="today-date">Order Date:</label>
+                            <input type="date" id="today-date" name="today_date" required>
+
+                            <label for="due-date">Delivery Date:</label>
+                            <input type="date" id="due-date" name="due_date" required>
+
+                            <label for="worker-name">Worker Name:</label>
+                            <select id="worker-name" name="worker_name" required>
+                                <option value="" disabled selected>Select a worker</option>
+                                <option value="Worker 1">Aziz</option>
+                                <option value="Worker 2">Mariam</option>
+                                <option value="Worker 3">Anam</option>
+                                <option value="Worker 4">Rehaman</option>
+                            </select>
+                        </div>
+
+                        <div class="form-column">
+                            <h2>Customer Information</h2>
+                            <label for="customer-name">Customer Name:</label>
+                            <input type="text" id="customer-name" name="customer_name" required>
+
+                            <label for="mobile-number">Mobile Number:</label>
+                            <input type="tel" id="mobile-number" name="mobile_number" pattern="[0-9]{10}" placeholder="1234567890" required>
+                        </div>
+                    </div>
+                    <div class="centering">
+
+                    <button type="submit" class="button save-print">Save and Print</button>
+
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+                </div>
+
+                <div id="customer-info" class="content-main hidden" >
+                    <h2>Customer's Information</h2>
+                    <div class="search-bar">
+                        <input type="text" id="search-input" placeholder="Search by Mobile Number">
+                        <button onclick="searchCustomer()">Search</button>
+                    </div>
+            
+                    <div class="search-results" id="search-results">
+                        <!-- Search results will be displayed here -->
+                    </div>
+            
+                    <div id="order-details">
+                        <!-- Customer's orders will be displayed here -->
+                    </div>
+                </div>
+                <div id="order-overview" class="content-main">
+                    <h2>Today's Orders</h2>
+                    <p>View the overview of all daily orders and their status.</p>
+                </div>
+
+                <div id="orders" class="content-main hidden">
+                    <h2>Orders</h2>
+
+                    <div class="sorting-options">
+                        <div>
+                            <label for="sort-date">Sort by Date:</label>
+                            <select id="sort-date" onchange="sortOrders('date')">
+                                <option value="newest">Newest First</option>
+                                <option value="oldest">Oldest First</option>
+                            </select>
+                        </div>
+            
+                        <div>
+                            <label for="sort-status">Sort by Status:</label>
+                            <select id="sort-status" onchange="sortOrders('status')">
+                                <option value="all">All</option>
+                                <option value="pending">Pending</option>
+                                <option value="in-progress">In Progress</option>
+                                <option value="completed">Completed</option>
+                            </select>
+                        </div>
+                    </div>
+            
+                    <div class="orders-list" id="orders-list">
+                        <!-- Orders will be listed here -->
+                    </div>
+                </div>
+                <div id="workers" class="content-main hidden">
+                    <h2>Workers</h2>
+        <div id="worker-list">
+            <!-- Worker Profiles will be dynamically inserted here -->
+        </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <script>
+        function showContent(id) {
+            // Hide all content sections
+            const contentSections = document.querySelectorAll('.content-main');
+            contentSections.forEach(section => section.classList.add('hidden'));
+
+            // Show the clicked section
+            document.getElementById(id).classList.remove('hidden');
+        }
+        function searchCustomer() {
+            const searchInput = document.getElementById("search-input").value;
+            fetch(`https://your-backend-api.com/customers?mobile=${searchInput}`)
+                .then(response => response.json())
+                .then(data => {
+                    displaySearchResults(data);
+                })
+                .catch(error => {
+                    console.error('Error fetching customer data:', error);
+                });
+        }
+
+        function displaySearchResults(customers) {
+            const searchResults = document.getElementById("search-results");
+            searchResults.innerHTML = "";
+
+            customers.forEach(customer => {
+                const resultItem = document.createElement("li");
+                resultItem.textContent = `${customer.name} - ${customer.mobile}`;
+                resultItem.onclick = function () {
+                    fetchCustomerOrders(customer.id);
+                };
+                searchResults.appendChild(resultItem);
+            });
+        }
+
+        function fetchCustomerOrders(customerId) {
+            fetch(`https://your-backend-api.com/orders?customerId=${customerId}`)
+                .then(response => response.json())
+                .then(orders => {
+                    displayCustomerOrders(orders);
+                })
+                .catch(error => {
+                    console.error('Error fetching customer orders:', error);
+                });
+        }
+
+        function displayCustomerOrders(orders) {
+            const orderDetails = document.getElementById("order-details");
+            orderDetails.innerHTML = "<h3>Customer Orders:</h3>";
+            const orderList = document.createElement("ul");
+
+            orders.forEach(order => {
+                const orderItem = document.createElement("li");
+                orderItem.textContent = `Order ID: ${order.id}, Garment: ${order.garment_type}, Quantity: ${order.quantity}`;
+                orderList.appendChild(orderItem);
+            });
+
+            orderDetails.appendChild(orderList);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchOrders();
+        });
+
+        function fetchOrders() {
+            fetch('https://your-backend-api.com/orders')
+                .then(response => response.json())
+                .then(orders => {
+                    displayOrders(orders);
+                })
+                .catch(error => {
+                    console.error('Error fetching orders:', error);
+                });
+        }
+
+        function displayOrders(orders) {
+            const ordersList = document.getElementById('orders-list');
+            ordersList.innerHTML = '';  // Clear previous content
+
+            orders.forEach(order => {
+                const orderItem = document.createElement('li');
+                orderItem.textContent = `Order ID: ${order.id}, Garment: ${order.garment_type}, Quantity: ${order.quantity}, Status: ${order.status}, Order Date: ${order.order_date}`;
+                ordersList.appendChild(orderItem);
+            });
+        }
+
+        function sortOrders(criteria) {
+            fetch('https://your-backend-api.com/orders')
+                .then(response => response.json())
+                .then(orders => {
+                    let sortedOrders = orders;
+                    
+                    if (criteria === 'date') {
+                        const dateSortOrder = document.getElementById('sort-date').value;
+                        sortedOrders = orders.sort((a, b) => {
+                            return dateSortOrder === 'newest' ? new Date(b.order_date) - new Date(a.order_date) : new Date(a.order_date) - new Date(b.order_date);
+                        });
+                    } else if (criteria === 'status') {
+                        const statusFilter = document.getElementById('sort-status').value;
+                        if (statusFilter !== 'all') {
+                            sortedOrders = orders.filter(order => order.status.toLowerCase() === statusFilter);
+                        }
+                    }
+                    
+                    displayOrders(sortedOrders);
+                })
+                .catch(error => {
+                    console.error('Error sorting orders:', error);
+                });
+        }
+
+        async function fetchWorkers() {
+            try {
+                const response = await fetch('/api/workers'); // Replace with your backend API endpoint
+                const workers = await response.json();
+
+                const workerList = document.getElementById('worker-list');
+                workerList.innerHTML = ''; // Clear existing content
+
+                workers.forEach(worker => {
+                    // Create a worker profile card
+                    const workerCard = document.createElement('div');
+                    workerCard.classList.add('worker-card');
+                    workerCard.innerHTML = `
+                        <h3>${worker.name}</h3>
+                        <p>${worker.role}</p>
+                        <button onclick="showWorkerOrders(${worker.id})">View Orders</button>
+                    `;
+                    workerList.appendChild(workerCard);
+                });
+            } catch (error) {
+                console.error('Error fetching workers:', error);
+            }
+        }
+
+        // Function to fetch and display orders for a specific worker
+        async function showWorkerOrders(workerId) {
+            try {
+                const response = await fetch(`/api/workers/${workerId}/orders`); // Replace with your backend API endpoint
+                const orders = await response.json();
+
+                const workerOrdersSection = document.getElementById('worker-orders');
+                workerOrdersSection.innerHTML = ''; // Clear existing content
+
+                orders.forEach(order => {
+                    const orderItem = document.createElement('div');
+                    orderItem.classList.add('order-item');
+                    orderItem.innerHTML = `
+                        <h4>Order ID: ${order.id}</h4>
+                        <p>Garment Type: ${order.garment_type}</p>
+                        <p>Status: ${order.status}</p>
+                        <p>Due Date: ${order.due_date}</p>
+                    `;
+                    workerOrdersSection.appendChild(orderItem);
+                });
+
+                showContent('worker-orders'); // Show the worker orders section
+            } catch (error) {
+                console.error('Error fetching worker orders:', error);
+            }
+        }
+
+        // Call fetchWorkers when the page loads or when this section is shown
+        document.addEventListener('DOMContentLoaded', fetchWorkers);
+    </script>
+</body>
+
+<footer>
+    &copy; Star Consultancy Services.
+</footer>
+
+</html>
